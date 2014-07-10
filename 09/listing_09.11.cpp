@@ -1,3 +1,6 @@
+#include <condition_variable>
+#include <atomic>
+
 class interrupt_flag
 {
     std::atomic<bool> flag;

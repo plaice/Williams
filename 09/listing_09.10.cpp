@@ -1,3 +1,5 @@
+#include <condition_variable>
+
 void interruptible_wait(std::condition_variable& cv,
                         std::unique_lock<std::mutex>& lk)
 {

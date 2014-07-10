@@ -1,3 +1,7 @@
+#include <queue>
+#include <memory>
+#include <future>
+
 class thread_pool
 {
     thread_safe_queue<function_wrapper> pool_work_queue;
@@ -18,10 +22,10 @@ class thread_pool
 
 public:
     template<typename FunctionType>
-    std::future<std::result_of<FunctionType()>::type>
+    std::future<typename std::result_of<FunctionType()>::type>
         submit(FunctionType f)
     {
-        typedef std::result_of<FunctionType()>::type result_type;
+        typedef typename std::result_of<FunctionType()>::type result_type;
         
         std::packaged_task<result_type()> task(f);
         std::future<result_type> res(task.get_future());

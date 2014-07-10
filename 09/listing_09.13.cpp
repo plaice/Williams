@@ -1,3 +1,6 @@
+#include <mutex>
+#include <vector>
+
 std::mutex config_mutex;
 std::vector<interruptible_thread> background_threads;
 

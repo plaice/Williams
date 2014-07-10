@@ -1,3 +1,7 @@
+#include <iterator>
+#include <vector>
+#include <future>
+
 template<typename Iterator,typename T>
 T parallel_accumulate(Iterator first,Iterator last,T init)
 {
@@ -20,7 +24,7 @@ T parallel_accumulate(Iterator first,Iterator last,T init)
         futures[i]=pool.submit(accumulate_block<Iterator,T>());
         block_start=block_end;
     }
-    T last_result=accumulate_block()(block_start,last);
+    T last_result=accumulate_block<Iterator,T>()(block_start,last);
     T result=init;
     for(unsigned long i=0;i<(num_blocks-1);++i)
     {

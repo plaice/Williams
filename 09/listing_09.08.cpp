@@ -1,3 +1,9 @@
+#include <atomic>
+#include <vector>
+#include <memory>
+#include <thread>
+#include <future>
+
 class thread_pool
 {
     typedef function_wrapper task_type;
@@ -74,13 +80,13 @@ public:
     }
 
     template<typename ResultType>
-    using task_handle=std::unique_future<ResultType>;
+    using task_handle=std::future<ResultType>;
 
     template<typename FunctionType>
-    task_handle<std::result_of<FunctionType()>::type> submit(
+    task_handle<typename std::result_of<FunctionType()>::type> submit(
         FunctionType f)
     {
-        typedef std::result_of<FunctionType()>::type result_type;
+        typedef typename std::result_of<FunctionType()>::type result_type;
         
         std::packaged_task<result_type()> task(f);
         task_handle<result_type> res(task.get_future());

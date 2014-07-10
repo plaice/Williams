@@ -1,3 +1,5 @@
+#include <thread>
+
 void thread_pool::run_pending_task()
 {
     function_wrapper task;

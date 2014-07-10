@@ -1,3 +1,7 @@
+#include <list>
+#include <algorithm>
+#include <functional>
+
 template<typename T>
 struct sorter
 {

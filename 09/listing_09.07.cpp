@@ -1,3 +1,6 @@
+#include <deque>
+#include <mutex>
+
 class work_stealing_queue
 {
 private:

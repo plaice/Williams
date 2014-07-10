@@ -1,3 +1,6 @@
+#include <thread>
+#include <future>
+
 class interrupt_flag
 {
 public:

@@ -1,3 +1,8 @@
+#include <vector>
+#include <atomic>
+#include <thread>
+#include <functional>
+
 class thread_pool
 {
     std::atomic_bool done;

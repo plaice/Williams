@@ -1,3 +1,6 @@
+#include <condition_variable>
+#include <atomic>
+
 class interrupt_flag
 {
     std::atomic<bool> flag;
@@ -7,7 +10,7 @@ class interrupt_flag
 
 public:
     interrupt_flag():
-        Interrupting threads
+        // Interrupting threads
         thread_cond(0),thread_cond_any(0)
     {}
 
