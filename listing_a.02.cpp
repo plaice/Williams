@@ -1,3 +1,5 @@
+#include <memory>
+
 class move_only
 {
     std::unique_ptr<my_class> data;

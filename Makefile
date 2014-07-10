@@ -66,7 +66,10 @@ OBJECTS = listing_04.04.o \
           listing_08.13.o \
           listing_08.02.o \
           listing_09.02.o \
-          listing_a.03.o
+          listing_a.01.o \
+          listing_a.03.o \
+          listing_a.04.o \
+          listing_c.01.o
 
 ERRORS = listing_04.10.err \
          listing_04.15.err \
@@ -113,10 +116,7 @@ ERRORS = listing_04.10.err \
          listing_09.12.err \
          listing_09.13.err \
          listing_10.01.err \
-         listing_a.01.err \
          listing_a.02.err \
-         listing_a.04.err \
-         listing_c.01.err \
          listing_c.02.err \
          listing_c.03.err \
          listing_c.04.err \

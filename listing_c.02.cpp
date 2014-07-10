@@ -2,12 +2,12 @@ namespace messaging
 {
     class sender
     {
-        queue*q;
+        queue* q;
     public:
         sender():
             q(nullptr)
         {}
-        explicit sender(queue*q_):
+        explicit sender(queue* q_):
             q(q_)
         {}
         template<typename Message>

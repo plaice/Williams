@@ -1,3 +1,5 @@
+#include <memory>
+
 namespace messaging
 {
     class close_queue

@@ -1,3 +1,6 @@
+#include <condition_variable>
+#include <thread>
+
 std::condition_variable cond;
 bool data_ready;
 std::mutex m;

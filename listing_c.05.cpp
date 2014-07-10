@@ -1,3 +1,5 @@
+#include <memory>
+
 namespace messaging
 {
     template<typename PreviousDispatcher,typename Msg,typename Func>

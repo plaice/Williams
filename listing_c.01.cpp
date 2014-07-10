@@ -1,11 +1,8 @@
-#include
-#include
-#include
-#include
-<mutex>
-<condition_variable>
-<queue>
-<memory>
+#include <mutex>
+#include <condition_variable>
+#include <queue>
+#include <memory>
+
 namespace messaging
 {
     struct message_base
@@ -28,7 +25,6 @@ namespace messaging
     {
         std::mutex m;
         std::condition_variable c;
-        message_base
         std::queue<std::shared_ptr<message_base> > q;
     public:
         template<typename T>

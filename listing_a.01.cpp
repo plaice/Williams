@@ -1,3 +1,5 @@
+#include <algorithm>
+
 class X
 {
 private:
