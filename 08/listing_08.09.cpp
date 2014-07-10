@@ -1,3 +1,8 @@
+#include <atomic>
+#include <thread>
+#include <future>
+#include <vector>
+
 template<typename Iterator,typename MatchType>
 Iterator parallel_find(Iterator first,Iterator last,MatchType match)
 {

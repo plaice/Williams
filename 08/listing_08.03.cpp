@@ -1,3 +1,7 @@
+#include <algorithm>
+#include <thread>
+#include <future>
+
 template<typename Iterator,typename T>
 struct accumulate_block
 {
@@ -41,7 +45,7 @@ T parallel_accumulate(Iterator first,Iterator last,T init)
         threads[i]=std::thread(std::move(task),block_start,block_end);
         block_start=block_end;
     }
-    T last_result=accumulate_block()(block_start,last);
+    T last_result=accumulate_block<Iterator,T>()(block_start,last);
 
     std::for_each(threads.begin(),threads.end(),
                   std::mem_fn(&std::thread::join));

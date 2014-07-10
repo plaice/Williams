@@ -1,3 +1,6 @@
+#include <thread>
+#include <atomic>
+
 std::thread task_thread;
 std::atomic<bool> task_cancelled(false);
 

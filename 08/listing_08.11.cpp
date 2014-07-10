@@ -1,3 +1,6 @@
+#include <future>
+#include <algorithm>
+
 template<typename Iterator>
 void parallel_partial_sum(Iterator first,Iterator last)
 {

@@ -1,3 +1,7 @@
+#include <algorithm>
+#include <future>
+#include <atomic>
+
 template<typename Iterator,typename MatchType>
 Iterator parallel_find_impl(Iterator first,Iterator last,MatchType match,
                             std::atomic<bool>& done)

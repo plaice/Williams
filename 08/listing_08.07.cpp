@@ -1,3 +1,9 @@
+#include <iterator>
+#include <thread>
+#include <vector>
+#include <future>
+#include <algorithm>
+
 template<typename Iterator,typename Func>
 void parallel_for_each(Iterator first,Iterator last,Func f)
 {

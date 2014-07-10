@@ -1,3 +1,6 @@
+#include <thread>
+#include <atomic>
+
 class barrier
 {
     unsigned const count;
