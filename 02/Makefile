@@ -1,0 +1,14 @@
+BINARIES = listing_02.01 \
+           listing_02.02 \
+           listing_02.03 \
+           listing_02.04 \
+           listing_02.05 \
+           listing_02.06 \
+           listing_02.07 \
+           listing_02.08
+
+OBJECTS = 
+
+ERRORS =
+
+include ../make.mk
