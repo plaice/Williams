@@ -1,26 +1,22 @@
-BINARIES =
+BINARIES = lf_stack \
+           lf_stack_hp \
+           lf_stack_lfsp \
+           lf_queue_sp_sc
 
-OBJECTS = listing_07.01.o \
-          listing_07.02.o \
-          listing_07.03.o \
-          listing_07.07.o \
-          listing_07.09.o \
-          listing_07.12.o \
-          listing_07.13.o \
-          listing_07.15.o
+ERRORS = lf_stack_rc.err \
+         lf_stack_rc_rao.err
 
-ERRORS = listing_07.04.err \
-         listing_07.05.err \
-         listing_07.06.err \
-         listing_07.08.err \
-         listing_07.10.err \
-         listing_07.11.err \
-         listing_07.14.err \
-         listing_07.16.err \
-         listing_07.17.err \
-         listing_07.18.err \
-         listing_07.19.err \
-         listing_07.20.err \
-         listing_07.21.err
+all: $(BINARIES) $(ERRORS)
 
-include ../make.mk
+%: %.cpp %.h
+	g++ -std=c++11 $< -lpthread -o $@
+
+%.err: %.cpp %.h
+	-g++ -std=c++11 $< -lpthread >$@ 2>&1
+
+
+#ts_lookup_table: ts_lookup_table.cpp ts_lookup_table.h
+#	g++ -std=c++11 $< -lpthread -lboost_system -lboost_thread -o $@
+
+clean:
+	rm -f $(BINARIES) $(ERRORS)
