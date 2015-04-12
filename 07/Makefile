@@ -2,7 +2,8 @@ BINARIES = lf_stack \
            lf_stack_hp \
            lf_stack_lfsp \
            lf_queue_sp_sc \
-           lf_queue_rc
+           lf_queue_rc \
+           lf_queue_rc_help
 
 ERRORS = lf_stack_rc.err \
          lf_stack_rc_rao.err
