@@ -1,3 +1,6 @@
+// Listings 7.15-19, pp.212-217, Williams.
+// Lock-free queue with reference counting.
+
 #include <atomic>
 #include <memory>
 
