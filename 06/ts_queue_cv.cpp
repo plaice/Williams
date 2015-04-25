@@ -2,5 +2,6 @@
 
 int main (int argc, char* argv[])
 {
-   ts_queue_cv<int> q;
+    ts_queue_cv<int> q;
+    return 0;
 }

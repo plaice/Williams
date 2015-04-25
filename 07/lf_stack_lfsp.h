@@ -1,5 +1,5 @@
 // Listing 7.9, pp.200-201, Williams.
-// Lock-free stach using lock-free std::shared_ptr<> implementation.
+// Lock-free stack using lock-free std::shared_ptr<> implementation.
 
 #include <atomic>
 #include <memory>

@@ -16,9 +16,5 @@ all: $(BINARIES) $(ERRORS)
 %.err: %.cpp %.h
 	-g++ -std=c++11 $< -lpthread >$@ 2>&1
 
-
-#ts_lookup_table: ts_lookup_table.cpp ts_lookup_table.h
-#	g++ -std=c++11 $< -lpthread -lboost_system -lboost_thread -o $@
-
 clean:
 	rm -f $(BINARIES) $(ERRORS)

@@ -2,5 +2,6 @@
 
 int main (int argc, char* argv[])
 {
-   ts_queue_fgl<int> q;
+    ts_queue_fgl<int> q;
+    return 0;
 }

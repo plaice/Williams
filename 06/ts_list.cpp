@@ -2,5 +2,6 @@
 
 int main (int argc, char* argv[])
 {
-   ts_list<int> q;
+    ts_list<int> q;
+    return 0;
 }
