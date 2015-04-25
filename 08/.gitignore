@@ -4,6 +4,8 @@ par_accumulate_es.err
 par_accumulate_pt.err
 par_find
 par_find_async
+par_foreach
+par_foreach_async
 par_partialsum.err
 par_partialsum_pu
 par_quicksort
