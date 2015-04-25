@@ -3,4 +3,5 @@
 int main (int argc, char* argv[])
 {
     lf_queue_rc_help<int> s;
+    return 0;
 }
