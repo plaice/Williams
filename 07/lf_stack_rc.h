@@ -6,7 +6,7 @@
 #include <memory>
 
 template<typename T>
-class lf_stack_src
+class lf_stack_rc
 {
 private:
     struct node;
@@ -41,7 +41,7 @@ private:
     }
 
 public:
-    ~lf_stack_src()
+    ~lf_stack_rc()
     {
         while(pop());
     }
