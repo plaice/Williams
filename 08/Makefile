@@ -13,10 +13,10 @@ ERRORS = par_accumulate_pt.err \
 
 all: $(BINARIES) $(ERRORS)
 
-%: %.cpp %.h
+%: %.cpp %.h join_threads.h
 	g++ -std=c++11 $< -lpthread -o $@
 
-%.err: %.cpp %.h
+%.err: %.cpp %.h join_threads.h
 	-g++ -std=c++11 $< -lpthread >$@ 2>&1
 
 clean:
