@@ -1,3 +1,6 @@
+// Listing 8.7, pp.255-256, Williams.
+// Parallel version of std::for_each.
+
 #include <iterator>
 #include <thread>
 #include <vector>

@@ -1,3 +1,6 @@
+// Listing 8.5, pp.249-250, Williams.
+// Exception-safe parallel version of std::accumulate using std::async.
+
 #include <iterator>
 #include <future>
 #include <algorithm>

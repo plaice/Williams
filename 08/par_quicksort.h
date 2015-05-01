@@ -1,3 +1,6 @@
+// Listing 8.1, pp.228-230, Williams.
+// Parallel quicksort using a stack of pending chunks to sort.
+
 #include <list>
 #include <vector>
 #include <algorithm>

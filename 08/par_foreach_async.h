@@ -1,3 +1,6 @@
+// Listing 8.8, p.257, Williams.
+// Parallel version of std::for_each using std::async.
+
 #include <iterator>
 #include <algorithm>
 #include <future>

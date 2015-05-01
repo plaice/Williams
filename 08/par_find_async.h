@@ -1,3 +1,6 @@
+// Listing 8.10, p.261, Williams.
+// Implementation of a parallel find algorithm using std::async.
+
 #include <algorithm>
 #include <future>
 #include <atomic>

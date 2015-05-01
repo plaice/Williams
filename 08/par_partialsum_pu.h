@@ -1,3 +1,6 @@
+// Listing 8.13, pp.269-271, Williams.
+// Parallel implementation of partial_sum by pairwise updates.
+
 #include <atomic>
 #include <thread>
 #include <vector>

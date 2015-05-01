@@ -1,3 +1,6 @@
+// Listing 8.4, p.248, Williams.
+// Exception-safe parallel version of std::accumulate.
+
 #include <iterator>
 #include <vector>
 #include <thread>

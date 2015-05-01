@@ -1,3 +1,6 @@
+// Listing 8.3, pp.245-246, Williams.
+// Parallel version of std::accumulate using std::packaged_task.
+
 #include <algorithm>
 #include <thread>
 #include <future>

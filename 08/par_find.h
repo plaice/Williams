@@ -1,3 +1,6 @@
+// Listing 8.9, pp.258-260, Williams.
+// Implementation of a parallel find algorithm.
+
 #include <atomic>
 #include <thread>
 #include <future>

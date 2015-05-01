@@ -1,3 +1,6 @@
+// Listing 8.11, pp.264-266, Williams.
+// Calculating partial sums in parallel by dividing the problem.
+
 #include <future>
 #include <algorithm>
 #include <thread>
