@@ -1,11 +1,11 @@
 BINARIES = listing_04.01 \
            listing_04.02 \
            listing_04.03 \
+           listing_04.04 \
            listing_04.05 \
            listing_04.06
 
-OBJECTS = listing_04.04.o \
-          listing_04.07.o \
+OBJECTS = listing_04.07.o \
           listing_04.08.o \
           listing_04.09.o \
           listing_04.11.o \
