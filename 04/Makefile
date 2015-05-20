@@ -3,10 +3,10 @@ BINARIES = listing_04.01 \
            listing_04.03 \
            listing_04.04 \
            listing_04.05 \
-           listing_04.06
+           listing_04.06 \
+           listing_04.07
 
-OBJECTS = listing_04.07.o \
-          listing_04.08.o \
+OBJECTS = listing_04.08.o \
           listing_04.09.o \
           listing_04.11.o \
           listing_04.12.o \

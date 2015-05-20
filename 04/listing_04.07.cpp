@@ -1,34 +1,38 @@
-#include <string>
-#include <future>
+#include "listing_04.07.h"
 
-struct X
+void X::foo(int i, std::string const& s)
 {
-    void foo(int,std::string const&);
-    std::string bar(std::string const&);
-};
+}
 
-
-X x;
-auto f1=std::async(&X::foo,&x,42,"hello");
-auto f2=std::async(&X::bar,x,"goodbye");
-
-struct Y
+std::string X::bar(std::string const& s)
 {
-    double operator()(double);
-};
-Y y;
-auto f3=std::async(Y(),3.141);
-auto f4=std::async(std::ref(y),2.718);
-X baz(X&);
-auto f6=std::async(baz,std::ref(x));
-class move_only
+    return s;
+}
+
+double Y::operator()(double d)
 {
-public:
-    move_only();
-    move_only(move_only&&);
-    move_only(move_only const&) = delete;
-    move_only& operator=(move_only&&);
-    move_only& operator=(move_only const&) = delete;
-    void operator()();
-};
-auto f5=std::async(move_only());
+    return d;
+}
+
+X baz(X& x)
+{
+    return x;
+}
+
+move_only::move_only()
+{
+}
+
+move_only::move_only(move_only&& m)
+{
+}
+
+void move_only::operator()()
+{
+}
+
+
+int main()
+{
+    return 0;
+}
