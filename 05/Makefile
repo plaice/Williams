@@ -1,4 +1,5 @@
 BINARIES = listing_05.01 \
+           listing_05.02 \
            listing_05.03 \
            listing_05.04 \
            listing_05.05 \
@@ -9,8 +10,6 @@ BINARIES = listing_05.01 \
            listing_05.10 \
            listing_05.12 \
            listing_05.13
-
-OBJECTS = listing_05.02.o
 
 ERRORS = listing_05.11.err
 

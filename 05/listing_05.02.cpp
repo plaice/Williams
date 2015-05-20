@@ -1,3 +1,6 @@
+// Listing 5.2, p.120, Williams.
+// Reading and writing variables from different threads.
+
 #include <vector>
 #include <atomic>
 #include <iostream>
@@ -19,4 +22,12 @@ void writer_thread()
 {
     data.push_back(42);
     data_ready=true;
+}
+
+int main()
+{
+    std::thread reader(reader_thread);
+    std::thread writer(writer_thread);
+    reader.join();
+    writer.join();
 }
