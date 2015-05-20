@@ -1,3 +1,6 @@
+// Listing 4.15, pp.99-100, Williams.
+// A simple implementation of an ATM logic class.
+
 #include <string>
 
 struct card_inserted

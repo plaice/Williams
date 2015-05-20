@@ -1,3 +1,6 @@
+// Listing 4.14, p.97, Williams.
+// A sample implementation of spawn_task.
+
 #include <thread>
 #include <future>
 #include <type_traits>

@@ -12,7 +12,4 @@ BINARIES = listing_04.01 \
            listing_04.13 \
            listing_04.14
 
-ERRORS = listing_04.15.err \
-         listing_04.16.err
-
 include ../make.mk

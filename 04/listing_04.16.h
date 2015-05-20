@@ -1,3 +1,6 @@
+// Listing 4.16, p.101, Williams.
+// The getting_pin state function for the simple ATM implementation.
+
 void atm::getting_pin()
 {
     incoming.wait()
