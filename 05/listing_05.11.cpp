@@ -1,3 +1,7 @@
+// Listing 5.11, pp.141-142, Williams.
+// Reading values frmo a queue with atomic operations.
+// Does not compile, missing functions.
+
 #include <atomic>
 #include <thread>
 #include <vector>
