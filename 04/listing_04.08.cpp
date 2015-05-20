@@ -1,3 +1,6 @@
+// Listing 4.8, p.79, Williams.
+// Partial class definition for a specialization of std::packaged_task<>.
+
 #include <future>
 #include <vector>
 
@@ -14,4 +17,9 @@ public:
     void operator()(std::vector<char>*,int);
 };
 
+}
+
+int main()
+{
+    return 0;
 }
