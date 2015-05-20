@@ -1,3 +1,6 @@
+// Listing 2.3, p.20, Williams.
+// Using RAII to wait for a thread to complete.
+
 #include <thread>
 
 class thread_guard

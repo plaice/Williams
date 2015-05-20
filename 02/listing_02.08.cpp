@@ -1,3 +1,6 @@
+// Listing 2.8, pp.29-30, Williams.
+// A naïve parallel version of std::accumulate.
+
 #include <thread>
 #include <numeric>
 #include <algorithm>

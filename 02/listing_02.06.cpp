@@ -1,3 +1,6 @@
+// Listing 2.6, p.27, Williams.
+// scoped_thread and example usage.
+
 #include <thread>
 #include <utility>
 

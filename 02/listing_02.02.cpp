@@ -1,3 +1,6 @@
+// Listing 2.2, p.19, Williams.
+// Waiting for a thread to finish.
+
 #include <thread>
 
 void do_something(int& i)

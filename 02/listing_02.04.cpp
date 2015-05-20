@@ -1,3 +1,6 @@
+// Listing 2.4, p.22, Williams.
+// Detaching a thread to handle other documents.
+
 #include <thread>
 #include <string>
 

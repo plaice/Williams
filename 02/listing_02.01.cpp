@@ -1,3 +1,7 @@
+// Listing 2.1, p.18, Williams.
+// A function that returns while a thread
+// still has access to local variables.
+
 #include <thread>
 
 void do_something(int& i)

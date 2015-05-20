@@ -1,3 +1,6 @@
+// Listing 2.5, p.26, Williams.
+// Returning a std::thread from a function.
+
 #include <thread>
 
 void some_function()

@@ -1,3 +1,6 @@
+// Listing 2.7, p.28, Williams.
+// Spawn some threads and wait for them to finish.
+
 #include <vector>
 #include <thread>
 #include <algorithm>
