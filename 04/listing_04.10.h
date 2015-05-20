@@ -1,3 +1,6 @@
+// Listing 4.10, p.82, Williams.
+// Handling future connections from a single thread using promises.
+
 #include <future>
 void process_connections(connection_set& connections)
 {

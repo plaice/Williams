@@ -1,3 +1,6 @@
+// Listing 4.11, pp.90-91, Williams.
+// Waiting for a condition variable with a timeout.
+
 #include <condition_variable>
 #include <mutex>
 #include <chrono>
