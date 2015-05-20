@@ -9,9 +9,8 @@ BINARIES = listing_04.01 \
            listing_04.09 \
            listing_04.11 \
            listing_04.12 \
-           listing_04.13
-
-OBJECTS = listing_04.14.o
+           listing_04.13 \
+           listing_04.14
 
 ERRORS = listing_04.15.err \
          listing_04.16.err
