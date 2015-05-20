@@ -1,3 +1,6 @@
+// Listing 5.7, p.133, Williams.
+// Acquire-release does not imply a total ordering.
+
 #include <atomic>
 #include <thread>
 #include <assert.h>

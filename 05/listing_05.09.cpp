@@ -1,3 +1,6 @@
+// Listing 5.9, pp.136-137, Williams.
+// Transitive synchronization using acquire and release ordering.
+
 #include <atomic>
 #include <thread>
 #include <assert.h>

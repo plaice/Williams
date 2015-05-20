@@ -1,3 +1,6 @@
+// Listing 5.6, pp.129-130, Williams.
+// Relaxed operations on multiple threads.
+
 #include <thread>
 #include <atomic>
 #include <iostream>

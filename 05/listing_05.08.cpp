@@ -1,3 +1,6 @@
+// Listing 5.8, pp.134-135, Williams.
+// Acquire-release operations can impose ordering on relaxed operations.
+
 #include <atomic>
 #include <thread>
 #include <assert.h>

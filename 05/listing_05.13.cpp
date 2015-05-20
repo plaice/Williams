@@ -1,3 +1,6 @@
+// Listing 5.13, p.145, Williams.
+// Enforcing ordering on nonatomic operations.
+
 #include <atomic>
 #include <thread>
 #include <assert.h>

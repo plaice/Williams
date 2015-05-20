@@ -1,3 +1,6 @@
+// Listing 5.5, pp.127-128, Williams.
+// Relaxed operations have very few ordering requirements.
+
 #include <atomic>
 #include <thread>
 #include <assert.h>

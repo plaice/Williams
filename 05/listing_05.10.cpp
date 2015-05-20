@@ -1,3 +1,6 @@
+// Listing 5.10, pp.139-140, Williams.
+// Using std::memory_order_consume to synchronize data.
+
 #include <string>
 #include <thread>
 #include <atomic>

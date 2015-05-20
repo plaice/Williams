@@ -1,3 +1,6 @@
+// Listing 5.3, p.122, Williams.
+// Order of evaluation of arguments to a function call is unspecified.
+
 #include <iostream>
 
 void foo(int a,int b)

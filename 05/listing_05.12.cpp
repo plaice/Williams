@@ -1,3 +1,6 @@
+// Listing 5.11, pp.141-142, Williams.
+// Reading values from a queue with atomic operations.
+
 #include <atomic>
 #include <thread>
 #include <assert.h>

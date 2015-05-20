@@ -1,3 +1,6 @@
+// Listing 5.4, p.125, Williams.
+// Sequential consistency implies a total ordering.
+
 #include <atomic>
 #include <thread>
 #include <assert.h>
