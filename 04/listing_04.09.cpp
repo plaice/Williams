@@ -14,4 +14,5 @@ void get_and_process_gui_message()
 
 int main()
 {
+    return 0;
 }
