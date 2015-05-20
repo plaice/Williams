@@ -1,3 +1,6 @@
+// Listing 3.1, p.38, Williams.
+// Protecting a list with a mutex.
+
 #include <list>
 #include <mutex>
 #include <algorithm>

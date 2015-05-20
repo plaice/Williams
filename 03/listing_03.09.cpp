@@ -1,3 +1,6 @@
+// Listing 3.9, pp.54-55, Williams.
+// Using std::lock() and std::unique_lock in a swap operation.
+
 #include <mutex>
 
 class some_big_object

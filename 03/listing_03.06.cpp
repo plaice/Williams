@@ -1,3 +1,6 @@
+// Listing 3.6, p.48, Williams.
+// Using std::lock() and std::lock_guard in a swap operation.
+
 #include <mutex>
 
 class some_big_object

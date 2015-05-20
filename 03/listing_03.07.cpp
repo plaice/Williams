@@ -1,3 +1,6 @@
+// Listing 3.7, p.51, Williams.
+// Using a lock hierarchy to prevent deadlock.
+
 #include <mutex>
 
 class hierarchical_mutex

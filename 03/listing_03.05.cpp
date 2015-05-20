@@ -1,3 +1,6 @@
+// Listing 3.5, pp.45-46, Williams.
+// A fleshed-out class definition for a thread-safe stack.
+
 #include <exception>
 #include <stack>
 #include <mutex>

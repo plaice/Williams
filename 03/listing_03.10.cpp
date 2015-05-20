@@ -1,3 +1,6 @@
+// Listing 3.10, p.58, Williams.
+// Locking one mutex at a time in a comparison operator.
+
 #include <mutex>
 class Y
 {

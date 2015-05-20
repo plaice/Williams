@@ -1,3 +1,7 @@
+// Listing 3.12, pp.61-62, Williams.
+// Thread-safe lazy initialization of
+// a class member using std::call_once.
+
 #include <mutex>
 
 struct connection_info

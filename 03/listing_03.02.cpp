@@ -1,3 +1,6 @@
+// Listing 3.2, pp.39-40, Williams.
+// Accidentally passing out a reference to protected data.
+
 #include <mutex>
 
 class some_data

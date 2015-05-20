@@ -1,3 +1,6 @@
+// Listing 3.8, pp.52-53, Williams.
+// A simple hierarchical mutex.
+
 #include <climits>
 #include <mutex>
 #include <stdexcept>

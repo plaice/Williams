@@ -1,3 +1,6 @@
+// Listing 3.3, p.41, Williams.
+// The interface to the std::stack container adapter.
+
 #include <cstddef>
 #include <deque>
 template<typename T,typename Container=std::deque<T> >

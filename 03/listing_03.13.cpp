@@ -1,3 +1,6 @@
+// Listing 3.13, p.64, Williams.
+// Protecting a data structure with a boost::shared_mutex.
+
 #include <map>
 #include <string>
 #include <mutex>

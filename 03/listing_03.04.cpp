@@ -1,3 +1,6 @@
+// Listing 3.4, p.45, Williams.
+// An outline class definition for a thread-safe stack.
+
 #include <exception>
 #include <memory>
 

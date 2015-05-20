@@ -1,3 +1,6 @@
+// Listing 3.11, p.60, Williams.
+// Thread-safe lazy initialization using a mutex.
+
 #include <memory>
 #include <mutex>
 
