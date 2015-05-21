@@ -17,4 +17,5 @@ int get_num()
 int main()
 {
     foo(get_num(),get_num());
+    return 0;
 }

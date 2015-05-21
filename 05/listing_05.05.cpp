@@ -31,4 +31,5 @@ int main()
     a.join();
     b.join();
     assert(z.load()!=0);
+    return 0;
 }

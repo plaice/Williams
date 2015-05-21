@@ -74,4 +74,5 @@ int main()
     print(values3);
     print(values4);
     print(values5);
+    return 0;
 }

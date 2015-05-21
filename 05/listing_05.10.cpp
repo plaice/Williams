@@ -38,5 +38,5 @@ int main()
     std::thread t2(use_x);
     t1.join();
     t2.join();
+    return 0;
 }
-

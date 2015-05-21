@@ -46,4 +46,5 @@ int main()
     c.join();
     d.join();
     assert(z.load()!=0);
+    return 0;
 }

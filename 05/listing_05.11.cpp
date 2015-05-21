@@ -43,4 +43,5 @@ int main()
     a.join();
     b.join();
     c.join();
+    return 0;
 }

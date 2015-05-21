@@ -30,4 +30,5 @@ int main()
     std::thread writer(writer_thread);
     reader.join();
     writer.join();
+    return 0;
 }
