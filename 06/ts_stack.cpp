@@ -2,6 +2,6 @@
 
 int main (int argc, char* argv[])
 {
-    ts_stack<int> s;
+    threadsafe_stack<int> s;
     return 0;
 }

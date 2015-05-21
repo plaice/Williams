@@ -7,14 +7,14 @@
 #include <memory>
 
 template<typename T>
-class ts_queue_cv
+class threadsafe_queue
 {
 private:
     mutable std::mutex mut;
     std::queue<T> data_queue;
     std::condition_variable data_cond;
 public:
-    ts_queue_cv()
+    threadsafe_queue()
     {}
 
     void push(T new_value)

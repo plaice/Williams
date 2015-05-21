@@ -1,4 +1,4 @@
-// Listing 6.11, pp.171-173, Williams.
+// Listings 6.11-12, pp.171-174, Williams.
 // Thread-safe lookup table.
 
 #include <map>
@@ -11,7 +11,7 @@
 #include <boost/thread/shared_mutex.hpp>
 
 template<typename Key,typename Value,typename Hash=std::hash<Key> >
-class ts_lookup_table
+class threadsafe_lookup_table
 {
 private:
     typedef std::pair<Key,Value> bucket_value;
@@ -79,7 +79,7 @@ public:
     typedef Value mapped_type;
     typedef Hash hash_type;
     
-    ts_lookup_table(
+    threadsafe_lookup_table(
         unsigned num_buckets=19, Hash const& hasher_=Hash()):
         buckets(num_buckets),hasher(hasher_)
     {
@@ -89,9 +89,9 @@ public:
         }
     }
 
-    ts_lookup_table(ts_lookup_table const& other)=delete;
-    ts_lookup_table& operator=(
-        ts_lookup_table const& other)=delete;
+    threadsafe_lookup_table(threadsafe_lookup_table const& other)=delete;
+    threadsafe_lookup_table& operator=(
+        threadsafe_lookup_table const& other)=delete;
     
     Value value_for(Key const& key,
         Value const& default_value=Value()) const

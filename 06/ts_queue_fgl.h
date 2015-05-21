@@ -5,7 +5,7 @@
 #include <mutex>
 
 template<typename T>
-class ts_queue_fgl
+class threadsafe_queue
 {
 private:
     struct node
@@ -39,12 +39,12 @@ private:
         
 
 public:
-    ts_queue_fgl():
+    threadsafe_queue():
         head(new node),tail(head.get())
     {}
 
-    ts_queue_fgl(const ts_queue_fgl& other)=delete;
-    ts_queue_fgl& operator=(const ts_queue_fgl& other)=delete;
+    threadsafe_queue(const threadsafe_queue& other)=delete;
+    threadsafe_queue& operator=(const threadsafe_queue& other)=delete;
 
     std::shared_ptr<T> try_pop()
     {

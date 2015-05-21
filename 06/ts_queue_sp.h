@@ -7,14 +7,14 @@
 #include <memory>
 
 template<typename T>
-class ts_queue_sp
+class threadsafe_queue
 {
 private:
     mutable std::mutex mut;
     std::queue<std::shared_ptr<T> > data_queue;
     std::condition_variable data_cond;
 public:
-    ts_queue_sp()
+    threadsafe_queue()
     {}
 
     void wait_and_pop(T& value)

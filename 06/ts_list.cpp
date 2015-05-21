@@ -2,6 +2,6 @@
 
 int main (int argc, char* argv[])
 {
-    ts_list<int> q;
+    threadsafe_list<int> l;
     return 0;
 }

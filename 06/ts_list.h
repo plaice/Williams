@@ -5,7 +5,7 @@
 #include <mutex>
 
 template<typename T>
-class ts_list
+class threadsafe_list
 {
     struct node
     {
@@ -25,16 +25,16 @@ class ts_list
     node head;
 
 public:
-    ts_list()
+    threadsafe_list()
     {}
 
-    ~ts_list()
+    ~threadsafe_list()
     {
         remove_if([](T const&){return true;});
     }
 
-    ts_list(ts_list const& other)=delete;
-    ts_list& operator=(ts_list const& other)=delete;
+    threadsafe_list(threadsafe_list const& other)=delete;
+    threadsafe_list& operator=(threadsafe_list const& other)=delete;
     
     void push_front(T const& value)
     {

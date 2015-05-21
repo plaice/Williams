@@ -1,10 +1,10 @@
 // Listing 6.5, p.160, Williams.
-// Simple queue_dn with dummy node.
+// Simple queue with dummy node.
 
 #include <memory>
 
 template<typename T>
-class queue_dn
+class queue
 {
 private:
     struct node
@@ -17,12 +17,12 @@ private:
     node* tail;
     
 public:
-    queue_dn():
+    queue():
         head(new node),tail(head.get())
     {}
 
-    queue_dn(const queue_dn& other)=delete;
-    queue_dn& operator=(const queue_dn& other)=delete;
+    queue(const queue& other)=delete;
+    queue& operator=(const queue& other)=delete;
 
     std::shared_ptr<T> try_pop()
     {

@@ -2,6 +2,6 @@
 
 int main (int argc, char* argv[])
 {
-    queue_dn<int> q;
+    queue<int> q;
     return 0;
 }

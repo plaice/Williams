@@ -2,6 +2,6 @@
 
 int main (int argc, char* argv[])
 {
-    ts_queue_cv<int> q;
+    threadsafe_queue<int> q;
     return 0;
 }

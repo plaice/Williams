@@ -6,7 +6,7 @@
 #include <condition_variable>
 
 template<typename T>
-class ts_queue_lw
+class threadsafe_queue
 {
 private:
     struct node
