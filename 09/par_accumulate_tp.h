@@ -1,15 +1,17 @@
+// Listing 9.3, p.279, Williams.
+// parallel_accumulate using a thread with waitable tasks.
+
 #include <iterator>
 #include <vector>
 #include <future>
 #include <algorithm>
-#include "threadpool_wt.h"
 
 template<typename Iterator,typename T>
 struct accumulate_block
 {
-    void operator()(Iterator first,Iterator last,T& result)
+    T operator()(Iterator first,Iterator last)
     {
-        result=std::accumulate(first,last,result);
+        return std::accumulate(first,last,T());
     }
 };
 
@@ -32,7 +34,7 @@ T parallel_accumulate(Iterator first,Iterator last,T init)
     {
         Iterator block_end=block_start;
         std::advance(block_end,block_size);
-        futures[i]=pool.submit(accumulate_block<Iterator,T>());
+        futures[i]=pool.submit(accumulate_block<Iterator,T>{});
         block_start=block_end;
     }
     T last_result=accumulate_block<Iterator,T>()(block_start,last);

@@ -1,8 +1,8 @@
+#include "threadpool_wt.h"
 #include "par_accumulate_tp.h"
+#include <list>
 
 int main (int argc, char* argv[])
 {
-   std::vector<int> input;
-   int result = parallel_accumulate(input.begin(), input.end(), 0);
-   return 0;
+    return 0;
 }
