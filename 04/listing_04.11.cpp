@@ -22,4 +22,5 @@ bool wait_loop()
 
 int main()
 {
+    return 0;
 }
