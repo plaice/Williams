@@ -4,6 +4,7 @@
 #include <list>
 #include <algorithm>
 #include <functional>
+#include "threadpool_rpt.h"
 
 template<typename T>
 struct sorter
@@ -32,7 +33,7 @@ struct sorter
             chunk_data,chunk_data.begin(),
             divide_point);
     
-        thread_pool::task_handle<std::list<T> > new_lower=
+        std::future<std::list<T> > new_lower=
             pool.submit(
                 std::bind(
                     &sorter::do_sort,this,
@@ -41,7 +42,8 @@ struct sorter
         std::list<T> new_higher(do_sort(chunk_data));
         
         result.splice(result.end(),new_higher);
-        while(!new_lower.is_ready())
+        while(new_lower.wait_for(std::chrono::seconds(0)) ==
+              std::future_status::timeout)
         {
             pool.run_pending_task();
         }

@@ -56,18 +56,6 @@ class thread_pool
     std::vector<std::thread> threads;
     join_threads joiner;
 
-    void run_pending_task()
-    {
-        function_wrapper task;
-        if(work_queue.try_pop(task))
-        {
-            task();
-        }
-        else
-        {
-            std::this_thread::yield();
-        }
-
     void worker_thread()
     {
         while(!done)
@@ -99,6 +87,19 @@ public:
     ~thread_pool()
     {
         done=true;
+    }
+
+    void run_pending_task()
+    {
+        function_wrapper task;
+        if(work_queue.try_pop(task))
+        {
+            task();
+        }
+        else
+        {
+            std::this_thread::yield();
+        }
     }
 
     template<typename FunctionType>

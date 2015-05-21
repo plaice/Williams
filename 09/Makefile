@@ -2,7 +2,7 @@ BINARIES = threadpool \
            threadpool_wt \
            threadpool_rpt \
            par_accumulate_tp \
-           #par_foreach \
+           par_quicksort_tp \
            #par_foreach_async \
            #par_find \
            #par_find_async \
