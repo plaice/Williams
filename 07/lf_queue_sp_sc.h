@@ -5,7 +5,7 @@
 #include <atomic>
 
 template<typename T>
-class lf_queue_sp_sc
+class lock_free_queue
 {
 private:
     struct node
@@ -29,12 +29,12 @@ private:
         return old_head;
     }
 public:
-    lf_queue_sp_sc():
+    lock_free_queue():
         head(new node),tail(head.load())
     {}
-    lf_queue_sp_sc(const lf_queue_sp_sc& other)=delete;
-    lf_queue_sp_sc& operator=(const lf_queue_sp_sc& other)=delete;
-    ~lf_queue_sp_sc()
+    lock_free_queue(const lock_free_queue& other)=delete;
+    lock_free_queue& operator=(const lock_free_queue& other)=delete;
+    ~lock_free_queue()
     {
         while(node* const old_head=head.load())
         {

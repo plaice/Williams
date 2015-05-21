@@ -7,7 +7,7 @@
 #include <memory>
 
 template<typename T>
-class lf_stack_rc
+class lock_free_stack
 {
 private:
     struct node;
@@ -42,7 +42,7 @@ private:
     }
 
 public:
-    ~lf_stack_rc()
+    ~lock_free_stack()
     {
         while(pop());
     }

@@ -5,7 +5,7 @@
 #include <memory>
 
 template<typename T>
-class lf_queue_rc_help
+class lock_free_queue
 {
 private:
     struct node;

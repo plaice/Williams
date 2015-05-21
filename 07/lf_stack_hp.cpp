@@ -2,6 +2,6 @@
 
 int main (int argc, char* argv[])
 {
-    lf_stack_hp<int> s;
+    lock_free_stack<int> s;
     return 0;
 }

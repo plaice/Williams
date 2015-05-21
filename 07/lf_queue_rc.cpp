@@ -2,6 +2,6 @@
 
 int main (int argc, char* argv[])
 {
-    lf_queue_rc<int> s;
+    lock_free_queue<int> s;
     return 0;
 }

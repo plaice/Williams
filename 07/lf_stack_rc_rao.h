@@ -7,7 +7,7 @@
 #include <memory>
 
 template<typename T>
-class lf_stack_rc_rao
+class lock_free_stack
 {
 private:
     struct node;
@@ -42,7 +42,7 @@ private:
         old_counter.external_count=new_counter.external_count;
     }
 public:
-    ~lf_stack_rc_rao()
+    ~lock_free_stack()
     {
         while(pop());
     }

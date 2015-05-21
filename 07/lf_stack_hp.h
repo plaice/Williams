@@ -121,7 +121,7 @@ void delete_nodes_with_no_hazards()
 }
 
 template<typename T>
-class lf_stack_hp
+class lock_free_stack
 {
 private:
     struct node

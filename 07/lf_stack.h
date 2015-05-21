@@ -5,7 +5,7 @@
 #include <memory>
 
 template<typename T>
-class lf_stack
+class lock_free_stack
 {
 private:
     struct node
