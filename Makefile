@@ -1,4 +1,4 @@
-SUBDIRS = 01 02 03 04 05 06 07 08
+SUBDIRS = 01 02 03 04 05 06 07 08 09
 
 all:
 	for i in $(SUBDIRS); do (cd $$i; make); done
