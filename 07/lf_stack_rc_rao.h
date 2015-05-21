@@ -1,6 +1,7 @@
 // Listing 7.12, pp.207-209, Williams.
 // Lock-free stack with reference counting and relaxed atomic operations
-// Does not compile, missing __atomic_compare_exchange_16.
+// Does not compile, missing
+// __atomic_load_16 and __atomic_compare_exchange_16.
 
 #include <atomic>
 #include <memory>

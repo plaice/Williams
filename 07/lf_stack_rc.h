@@ -1,6 +1,7 @@
 // Listings 7.10-11, pp.201-204, Williams.
 // Lock-free stack using split reference counts.
-// Does not compile, missing __atomic_compare_exchange_16.
+// Does not compile, missing
+// __atomic_load_16 and __atomic_compare_exchange_16.
 
 #include <atomic>
 #include <memory>
