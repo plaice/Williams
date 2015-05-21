@@ -7,9 +7,8 @@ BINARIES = par_quicksort \
            par_foreach_async \
            par_find \
            par_find_async \
+           par_partialsum \
            par_partialsum_pu
-
-ERRORS = par_partialsum.err
 
 all: $(BINARIES) $(ERRORS)
 

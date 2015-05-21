@@ -6,6 +6,6 @@ par_find
 par_find_async
 par_foreach
 par_foreach_async
-par_partialsum.err
+par_partialsum
 par_partialsum_pu
 par_quicksort
