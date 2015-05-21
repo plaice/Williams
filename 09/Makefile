@@ -4,11 +4,9 @@ BINARIES = threadpool \
            par_accumulate_tp \
            par_quicksort_tp \
            work_stealing_queue \
-           #par_find \
-           #par_find_async \
-           #par_partialsum_pu
+           #threadpool_ws
 
-ERRORS = #par_accumulate_pt.err \
+ERRORS = threadpool_ws.err \
          #par_accumulate_es.err \
          #par_partialsum.err
 

@@ -1,18 +1,22 @@
 // Listing 9.8, p.286, Williams.
 // A thread pool that uses work stealing.
+// Does not link because of the static thread_local fields.
 
 #include <atomic>
 #include <vector>
 #include <memory>
 #include <thread>
 #include <future>
+#include "work_stealing_queue.h"
+#include "../06/ts_queue_cv.h"
+#include "../08/join_threads.h"
 
 class thread_pool
 {
     typedef function_wrapper task_type;
     
     std::atomic_bool done;
-    thread_safe_queue<task_type> pool_work_queue;
+    threadsafe_queue<task_type> pool_work_queue;
     std::vector<std::unique_ptr<work_stealing_queue> > queues;
     std::vector<std::thread> threads;
     join_threads joiner;
