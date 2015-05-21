@@ -1,4 +1,6 @@
-BINARIES = lf_stack \
+BINARIES = spinlock \
+           lf_stack_nl \
+           lf_stack \
            lf_stack_hp \
            lf_stack_lfsp \
            lf_queue_sp_sc \
