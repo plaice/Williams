@@ -1,7 +1,6 @@
 // Listing 9.2, pp.277-278, Williams.
 // A thread pool with waitable tasks.
 
-#include <deque>
 #include <future>
 #include <memory>
 #include <functional>
