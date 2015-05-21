@@ -36,4 +36,5 @@ void oops()
 int main()
 {
     oops();
+    return 0;
 }

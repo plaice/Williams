@@ -27,4 +27,5 @@ int main()
     t1.join();
     std::thread t2=g();
     t2.join();
+    return 0;
 }

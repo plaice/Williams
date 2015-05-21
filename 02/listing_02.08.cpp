@@ -67,4 +67,5 @@ int main()
     }
     int sum=parallel_accumulate(vi.begin(),vi.end(),5);
     std::cout<<"sum="<<sum<<std::endl;
+    return 0;
 }

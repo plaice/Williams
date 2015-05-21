@@ -61,4 +61,5 @@ void edit_document(std::string const& filename)
 int main()
 {
     edit_document("bar.doc");
+    return 0;
 }
