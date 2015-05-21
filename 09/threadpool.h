@@ -30,6 +30,7 @@ class thread_pool
             }
         }
     }
+
 public:
     thread_pool():
         done(false),joiner(threads)

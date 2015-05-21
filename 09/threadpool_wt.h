@@ -8,6 +8,7 @@
 #include <iostream>
 #include <iostream>
 #include "../08/join_threads.h"
+#include "../06/ts_queue_cv.h"
 
 class function_wrapper
 {
@@ -23,13 +24,16 @@ class function_wrapper
         impl_type(F&& f_): f(std::move(f_)) {}
         void call() { f(); }
     };
+
 public:
     template<typename F>
     function_wrapper(F&& f):
         impl(new impl_type<F>(std::move(f)))
     {}
 
-    void call() { impl->call(); }
+    void operator()() { impl->call(); }
+
+    function_wrapper() = default;
 
     function_wrapper(function_wrapper&& other):
         impl(std::move(other.impl))
@@ -48,8 +52,51 @@ public:
 
 class thread_pool
 {
+    std::atomic_bool done;
+    threadsafe_queue<function_wrapper> work_queue;
+    std::vector<std::thread> threads;
+    join_threads joiner;
+
+    void worker_thread()
+    {
+        while(!done)
+        {
+            function_wrapper task;
+            if(work_queue.try_pop(task))
+            {
+                task();
+            }
+            else
+            {
+                std::this_thread::yield();
+            }
+        }
+    }
+
 public:
-    std::deque<function_wrapper> work_queue;
+    thread_pool():
+        done(false),joiner(threads)
+    {
+        unsigned const thread_count=std::thread::hardware_concurrency();
+        try
+        {
+            for(unsigned i=0;i<thread_count;++i)
+            {
+                threads.push_back(
+                    std::thread(&thread_pool::worker_thread,this));
+            }
+        }
+        catch(...)
+        {
+            done=true;
+            throw;
+        }
+    }
+
+    ~thread_pool()
+    {
+        done=true;
+    }
 
     template<typename FunctionType>
     std::future<typename std::result_of<FunctionType()>::type>
@@ -59,8 +106,7 @@ public:
         
         std::packaged_task<result_type()> task(std::move(f));
         std::future<result_type> res(task.get_future());
-        work_queue.push_back(std::move(task));
+        work_queue.push(std::move(task));
         return res;
     }
-    // rest as before
 };
