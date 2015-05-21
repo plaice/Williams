@@ -1,7 +1,7 @@
 par_accumulate
 par_accumulate_async
+par_accumulate_es
 par_accumulate_pt
-par_accumulate_es.err
 par_find
 par_find_async
 par_foreach
