@@ -64,4 +64,6 @@ void thread_b()
 }
 
 int main()
-{}
+{
+    return 0;
+}

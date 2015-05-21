@@ -67,5 +67,5 @@ int main()
         int x;
         si.pop(x);
     }
-    
+    return 0;
 }

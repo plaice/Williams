@@ -26,4 +26,5 @@ int main()
 {
     add_to_list(42);
     std::cout<<"contains(1)="<<list_contains(1)<<", contains(42)="<<list_contains(42)<<std::endl;
+    return 0;
 }
