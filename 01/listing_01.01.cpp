@@ -13,4 +13,5 @@ int main()
 {
     std::thread t(hello);
     t.join();
+    return 0;
 }
