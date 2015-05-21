@@ -3,7 +3,7 @@ BINARIES = threadpool \
            threadpool_rpt \
            par_accumulate_tp \
            par_quicksort_tp \
-           #par_foreach_async \
+           work_stealing_queue \
            #par_find \
            #par_find_async \
            #par_partialsum_pu
