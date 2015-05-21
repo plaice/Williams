@@ -1,5 +1,6 @@
 BINARIES = threadpool \
            threadpool_wt \
+           threadpool_rpt \
            par_accumulate_tp \
            #par_foreach \
            #par_foreach_async \
