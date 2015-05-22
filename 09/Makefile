@@ -7,6 +7,7 @@ BINARIES = threadpool \
            #threadpool_ws
 
 ERRORS = threadpool_ws.err \
+         threadpool_wq.err \
          #par_accumulate_es.err \
          #par_partialsum.err
 
