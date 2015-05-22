@@ -5,6 +5,7 @@ BINARIES = threadpool \
            par_quicksort_tp \
            work_stealing_queue \
            interruptible_thread \
+           interruptible_thread_tm \
            #threadpool_ws
 
 ERRORS = threadpool_ws.err \
@@ -16,6 +17,9 @@ all: $(BINARIES) $(ERRORS)
 
 %: %.cpp %.h
 	g++ -std=c++11 $< -lpthread -o $@
+
+interruptible_thread_tm: interruptible_thread_tm.cpp
+	g++ -std=c++11 $< -lpthread -lboost_system -lboost_thread -o $@
 
 %.err: %.cpp %.h
 	-g++ -std=c++11 $< -lpthread >$@ 2>&1

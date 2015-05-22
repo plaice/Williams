@@ -4,6 +4,7 @@
 
 #include <condition_variable>
 #include <atomic>
+#include <boost/thread/thread.hpp>
 
 class interrupt_flag
 {
@@ -43,21 +44,31 @@ public:
         thread_cond=0;
     }
 
-    struct clear_cv_on_destruct
-    {
-        ~clear_cv_on_destruct()
-        {
-            this_thread_interrupt_flag.clear_condition_variable();
-        }
-    };
 };
+thread_local interrupt_flag this_thread_interrupt_flag;
+
+struct clear_cv_on_destruct
+{
+    ~clear_cv_on_destruct()
+    {
+        this_thread_interrupt_flag.clear_condition_variable();
+    }
+};
+
+void interruption_point()
+{
+    if(this_thread_interrupt_flag.is_set())
+    {
+        throw boost::thread_interrupted();
+    }
+}
 
 void interruptible_wait(std::condition_variable& cv,
                         std::unique_lock<std::mutex>& lk)
 {
     interruption_point();
     this_thread_interrupt_flag.set_condition_variable(cv);
-    interrupt_flag::clear_cv_on_destruct guard;
+    clear_cv_on_destruct guard;
     interruption_point();
     cv.wait_for(lk,std::chrono::milliseconds(1));
     interruption_point();
