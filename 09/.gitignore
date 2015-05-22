@@ -5,6 +5,7 @@ threadpool_wt
 threadpool_rpt
 work_stealing_queue
 interruptible_thread
+interruptible_thread_iw
 interruptible_thread_tm
 threadpool_wq.err
 threadpool_ws.err

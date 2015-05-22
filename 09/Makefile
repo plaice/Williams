@@ -6,12 +6,10 @@ BINARIES = threadpool \
            work_stealing_queue \
            interruptible_thread \
            interruptible_thread_tm \
-           #threadpool_ws
+           interruptible_thread_iw
 
 ERRORS = threadpool_ws.err \
-         threadpool_wq.err \
-         #par_accumulate_es.err \
-         #par_partialsum.err
+         threadpool_wq.err
 
 all: $(BINARIES) $(ERRORS)
 

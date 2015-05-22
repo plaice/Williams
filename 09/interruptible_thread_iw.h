@@ -4,6 +4,14 @@
 #include <condition_variable>
 #include <atomic>
 
+void interruption_point()
+{
+//    if(this_thread_interrupt_flag.is_set())
+//    {
+//        throw boost::thread_interrupted();
+//    }
+}
+
 class interrupt_flag
 {
     std::atomic<bool> flag;
@@ -74,6 +82,7 @@ public:
 
     // rest as before
 };
+thread_local interrupt_flag this_thread_interrupt_flag;
 
 template<typename Lockable>
 void interruptible_wait(std::condition_variable_any& cv,
