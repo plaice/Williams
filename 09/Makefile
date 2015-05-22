@@ -4,6 +4,7 @@ BINARIES = threadpool \
            par_accumulate_tp \
            par_quicksort_tp \
            work_stealing_queue \
+           interruptible_thread \
            #threadpool_ws
 
 ERRORS = threadpool_ws.err \
